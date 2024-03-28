@@ -7,6 +7,8 @@ License:        MIT
 URL:            https://github.com/lsd-rs/lsd
 Source0:        https://github.com/lsd-rs/lsd/archive/refs/tags/v%{version}.tar.gz
 
+BuildRequires:  gcc
+
 %description
 This project is a rewrite of GNU ls with lots of added features like colors, icons, tree-view, more formatting options etc. The project is heavily inspired by the super colorls project.
 
