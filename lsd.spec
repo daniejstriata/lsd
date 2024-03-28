@@ -1,6 +1,6 @@
 Name:           lsd
 Version:        1.1.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        The next gen ls command
 
 License:        MIT
@@ -8,6 +8,7 @@ URL:            https://github.com/lsd-rs/lsd
 Source0:        https://github.com/lsd-rs/lsd/archive/refs/tags/v%{version}.tar.gz
 
 BuildRequires:  gcc
+BuildRequires:  upx
 
 %description
 This project is a rewrite of GNU ls with lots of added features like colors, icons, tree-view, more formatting options etc. The project is heavily inspired by the super colorls project.
@@ -27,6 +28,7 @@ cargo build --release
 %global _build_id_links none
 mkdir -p %{buildroot}/%{_bindir}
 strip "target/release/lsd"
+upx target/release/lsd
 install -m 755 target/release/%{name} %{buildroot}/%{_bindir}/%{name}
 
 %files
