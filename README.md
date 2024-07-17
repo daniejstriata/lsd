@@ -59,23 +59,23 @@ The project is heavily inspired by the super [colorls](https://github.com/athity
 Install the patched fonts of powerline nerd-font and/or font-awesome. Have a look at the [Nerd Font README](https://github.com/ryanoasis/nerd-fonts/blob/master/readme.md) for more installation instructions. Don't forget to setup your terminal in order to use the correct font.
 
 | OS/Distro                       | Command                                                              |
-| ------------------------------- | -------------------------------------------------------------------- |
-| Archlinux                       | `pacman -S lsd`                                                      |
-| Fedora                          | `dnf install lsd`                                                    |
-| Gentoo                          | `sudo emerge sys-apps/lsd`                                           |
-| macOS                           | `brew install lsd` or `sudo port install lsd`                        |
-| NixOS                           | `nix-env -iA nixos.lsd`                                              |
-| FreeBSD                         | `pkg install lsd`                                                    |
-| NetBSD or any `pkgsrc` platform | `pkgin install lsd` or `cd /usr/pkgsrc/sysutils/lsd && make install` |
-| OpenBSD                         | `pkg_add lsd`                                                        |
-| Windows                         | `scoop install lsd` or `winget install --id lsd-rs.lsd`              |
-| Android (via Termux)            | `pkg install lsd`                                                    |
-| Debian sid and bookworm         | `apt install lsd`                                                    |
-| Ubuntu 23.04 (Lunar Lobster)    | `apt install lsd`                                                    |
-| Earlier Ubuntu/Debian versions  | **snap discontinued**, use [From Binaries](#from-binaries)           |
-| Solus                           | `eopkg it lsd`                                                       |
-| Void Linux                      | `sudo xbps-install lsd`                                              |
-| openSUSE                        | `sudo zypper install lsd`                                            |
+| ------------------------------- | -------------------------------------------------------------------------------|
+| Archlinux                       | `pacman -S lsd`                                                                |
+| Fedora                          | `dnf install lsd`                                                              |
+| Gentoo                          | `sudo emerge sys-apps/lsd`                                                     |
+| macOS                           | `brew install lsd` or `sudo port install lsd`                                  |
+| NixOS                           | `nix-env -iA nixos.lsd`                                                        |
+| FreeBSD                         | `pkg install lsd`                                                              |
+| NetBSD or any `pkgsrc` platform | `pkgin install lsd` or `cd /usr/pkgsrc/sysutils/lsd && make install`           |
+| OpenBSD                         | `pkg_add lsd`                                                                  |
+| Windows                         | `scoop install lsd` or `winget install --id lsd-rs.lsd` or `choco install lsd` |
+| Android (via Termux)            | `pkg install lsd`                                                              |
+| Debian sid and bookworm         | `apt install lsd`                                                              |
+| Ubuntu 23.04 (Lunar Lobster)    | `apt install lsd`                                                              |
+| Earlier Ubuntu/Debian versions  | **snap discontinued**, use [From Binaries](#from-binaries)                     |
+| Solus                           | `eopkg it lsd`                                                                 |
+| Void Linux                      | `sudo xbps-install lsd`                                                        |
+| openSUSE                        | `sudo zypper install lsd`                                                      |
 
 ### From source
 
@@ -291,7 +291,7 @@ truncate-owner:
 
 ### Color Theme
 
-Color theme can be configured in the [configuration file](#configuration)(color.theme),
+Color theme can be configured in the [configuration file](#configuration)(color.theme).
 The valid theme configurations are:
 
 - `default`: the default color scheme shipped in `lsd`
@@ -364,9 +364,6 @@ git-status:
 
 When creating a theme for `lsd`, you can specify any part of the default theme,
 and then change its colors, the items missed would fall back to use the default colors.
-
-Please also notice that an empty theme is **NOT** supported due to
-[a bug in serde lib](https://github.com/dtolnay/serde-yaml/issues/86).
 
 ### Icon Theme
 
